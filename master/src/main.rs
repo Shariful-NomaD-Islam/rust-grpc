@@ -57,7 +57,7 @@ async fn main() {
         .route("/", get(hello_handler))
         .route("/token", post(token_handler));
 
-    let addr = SocketAddr::from(([127, 0, 0, 1], 3000));
+    let addr = SocketAddr::from(([0, 0, 0, 0], 3000));
     let listener = TcpListener::bind(addr).await.unwrap();
 
     println!("Master HTTP server running at http://{}", addr);
