@@ -1,0 +1,14 @@
+[package]
+name = "worker"
+version = "0.1.0"
+edition = "2021"
+build = "build.rs"
+
+[dependencies]
+tonic = { version = "0.10", features = ["transport"] }
+prost = "0.12"
+tokio = { version = "1", features = ["full"] }
+rand = "0.8"
+
+[build-dependencies]
+tonic-build = "0.10"

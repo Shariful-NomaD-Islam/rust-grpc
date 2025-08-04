@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package random;
+
+service RandomService {
+  rpc GetRandom (RandomRequest) returns (RandomReply);
+}
+
+message RandomRequest {}
+
+message RandomReply {
+  string value = 1;
+}
+
